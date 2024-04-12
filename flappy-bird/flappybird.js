@@ -63,6 +63,11 @@ window.onload = function() {
     requestAnimationFrame(update);
     setInterval(placePipes, 1500); //every 1.5 seconds set a new pipe
     document.addEventListener("keydown", moveBird);
+    document.addEventListener('touchstart', function (event) 
+       {
+        
+            moveBird({ code: 'Space' });
+        });
 }
 
 function update() {
